@@ -42,6 +42,7 @@ func ml(file multipart.File) int {
 	var data3 mat.Dense
 	data3.Mul(gData.T(), &model.Beta)
 	if data3.At(0, 0) > 0 {
+		fmt.Println("OK")
 		return 1
 	} else {
 		return -1
